@@ -1,14 +1,17 @@
 // Assignment code here
 
+// Input variables
+var enter;
+var acceptNumber;
+var acceptUppercase;
+var acceptLowercase;
+var acceptCharacter;
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   console.log("button-works");
   // password length/value
-
-  var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-}
 
 // Write password to the #password input
 function writePassword() {
