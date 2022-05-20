@@ -5,6 +5,9 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   console.log("button-works");
+  // password length/value
+
+  var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
 }
 
 // Write password to the #password input
