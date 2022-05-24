@@ -4,8 +4,8 @@
 let enter;
 let acceptLength;
 let acceptNumber;
-let acceptUppercase;
-let acceptLowercase;
+let acceptUpperCase;
+let acceptLowerCase;
 let acceptCharacter;
 
 // Arrays for special characters, upper&lowercase and numbers
@@ -92,13 +92,25 @@ function writePassword() {
   let acceptLength = window.prompt(
     "How long would you like your password to be? Choose between 8 and 128."
   );
-  //While statement prompting user to keep password between 8 and 128 (While chose to endlessly loop prompt given continuous miss input)
+  //While statement prompting user to keep password between 8 and 128 ("While" chose to endlessly loop prompt given continuous miss input)
   while (acceptLength <= 8 || acceptLength >= 128) {
     window.alert("Length of password must be between 8 and 128.");
     let acceptLength = window.prompt(
       "How long would you like your password to be? Choose between 8 and 128."
     );
   }
+  //window confirmation for each global variable
+  let acceptNumber = window.confirm("Confirm if you want a number in password");
+  let acceptUpperCase = window.confirm(
+    "Confirm if you want an uppercase letter in password"
+  );
+  let acceptLowerCase = window.confrim(
+    "Confirm if you want a lowercase letter in password"
+  );
+  let acceptCharacter = window.confrim(
+    "Confirm if you want a special character in password"
+  );
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
