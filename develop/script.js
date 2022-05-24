@@ -88,6 +88,14 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  //length prompt
+  let acceptLength = window.prompt(
+    "How long would you like your password to be? Choose between 8 and 128."
+  );
+  //If statement prompting user to keep password between 8 and 128
+  if (acceptLength <= 8 || acceptLength >= 128) {
+    window.alert("Length of password must be between 8 and 128.");
+  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
