@@ -1,5 +1,4 @@
 // Assignment code here
-// document.querySelector("#generate").addEventListener("click", writePassword);
 // input variables
 let enter;
 let acceptLength = "";
@@ -7,8 +6,6 @@ let acceptNumber;
 let acceptUpperCase;
 let acceptLowerCase;
 let acceptCharacter;
-// let passwordArr = [];
-// let randomPassArr = [];
 
 // Arrays for the criteria of special characters, upper&lowercase and numbers
 
