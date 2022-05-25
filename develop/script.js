@@ -113,6 +113,7 @@ function generatePassword() {
     "Confirm if you want a special character in password"
   );
   let passwordArr = [];
+  //if statement using concat instead of push to combine two arrays (one empty)
   if (acceptNumber) {
     passwordArr = passwordArr.concat(numbers);
   }
