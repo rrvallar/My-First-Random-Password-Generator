@@ -1,12 +1,14 @@
 // Assignment code here
-
-// Global input variables
+// document.querySelector("#generate").addEventListener("click", writePassword);
+// input variables
 let enter;
-let acceptLength;
+let acceptLength = "";
 let acceptNumber;
 let acceptUpperCase;
 let acceptLowerCase;
 let acceptCharacter;
+// let passwordArr = [];
+// let randomPassArr = [];
 
 // Arrays for the criteria of special characters, upper&lowercase and numbers
 
@@ -87,7 +89,7 @@ let specialCharacters = [
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
   //length prompt
   let acceptLength = window.prompt(
     "How long would you like your password to be? Choose between 8 and 128."
@@ -99,7 +101,7 @@ function writePassword() {
       "How long would you like your password to be? Choose between 8 and 128."
     );
   }
-  //Window confirmation for each global character variable
+  //Window confirmation for each variable
   acceptNumber = window.confirm("Confirm if you want a number in password");
   acceptUpperCase = window.confirm(
     "Confirm if you want an uppercase letter in password"
@@ -110,12 +112,24 @@ function writePassword() {
   acceptCharacter = window.confirm(
     "Confirm if you want a special character in password"
   );
-
+  let passwordArr = [];
+  if (acceptNumber) {
+    passwordArr = passwordArr.concat(numbers);
+  }
+  // For loop array used in combination with if statement action
+  let randomPassArr = [];
+  for (var i = 0; i < acceptLength; i++) {
+    randomPassArr =
+      randomPassArr +
+      passwordArr[Math.floor(Math.random() * passwordArr.length)];
+    console.log(randomPassArr);
+  }
+  return randomPassArr;
+}
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
-console.log(acceptNumber);
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
