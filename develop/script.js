@@ -1,13 +1,12 @@
 // Assignment code here
-// input variables
-let enter;
+// input Global variables
 let acceptLength = "";
 let acceptNumber;
 let acceptUpperCase;
 let acceptLowerCase;
 let acceptCharacter;
 
-// Arrays for the criteria of special characters, upper&lowercase and numbers
+// Global arrays for the criteria of special characters, upper&lowercase and numbers
 
 let upperCase = [
   "A",
@@ -110,12 +109,16 @@ function generatePassword() {
     "Confirm if you want a special character in password"
   );
   let passwordArr = [];
-  //if statement using concat instead of push to combine two arrays (one empty)
+  //if statement using concat instead of push to combine two the arrays
   if (acceptNumber) {
     passwordArr = passwordArr.concat(numbers);
   }
-  // For loop array used in combination with if statement action
+  if (acceptUpperCase) {
+    passwordArr = passwordArr.concat(upperCase);
+  }
+  // Empty Random Password array to be filled
   let randomPassArr = [];
+  // For loop to generate random password with math operators to round number/consider users password length choice
   for (var i = 0; i < acceptLength; i++) {
     randomPassArr =
       randomPassArr +
