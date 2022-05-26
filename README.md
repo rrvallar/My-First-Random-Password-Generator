@@ -1,4 +1,4 @@
-# password-generator
+# My First Random Password Generator
 #
 https://github.com/rrvallar/password-generator.git
 
