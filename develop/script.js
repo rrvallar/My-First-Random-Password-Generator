@@ -74,6 +74,7 @@ let specialCharacters = [
   "?",
   "~",
 ];
+// let allArr = [number, specialCharacters, upperCase, lowerCase];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -102,14 +103,16 @@ function generatePassword() {
   acceptCharacter = window.confirm(
     "Confirm if you want a special character in password"
   );
+  let allArr = [number, specialCharacters, upperCase, lowerCase];
   let passwordArr = [];
   //if statement using concat instead of push to combine the two arrays
+  [numbers, upperCase, lowerCase, specialCharacters].forEach;
   if (acceptNumber) {
-    passwordArr = passwordArr.concat(numbers);
+    passwordArr = passwordArr.concat(allArr[1]);
   }
-  if (acceptUpperCase) {
-    passwordArr = passwordArr.concat(upperCase);
-  }
+  // if (acceptUpperCase) {
+  //   passwordArr = passwordArr.concat(upperCase);
+  // }
   // Empty Random Password array to be filled
   let randomPassArr = [];
   // For loop to generate random password with math operators to round number/consider users password length choice
