@@ -1,10 +1,4 @@
 // Assignment code here
-// input Global variables
-let acceptLength = "";
-let acceptNumber;
-let acceptUpperCase;
-let acceptLowerCase;
-let acceptCharacter;
 
 // Global arrays for the criteria of special characters, upper&lowercase and numbers
 
@@ -109,7 +103,7 @@ function generatePassword() {
     "Confirm if you want a special character in password"
   );
   let passwordArr = [];
-  //if statement using concat instead of push to combine two the arrays
+  //if statement using concat instead of push to combine the two arrays
   if (acceptNumber) {
     passwordArr = passwordArr.concat(numbers);
   }
